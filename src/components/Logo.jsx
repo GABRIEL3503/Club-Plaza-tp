@@ -1,7 +1,7 @@
 // Isotipo + logotipo de Rumbo
-function Logo({ light = false }) {
+function Logo({ light = false, onClick }) {
   return (
-    <a href="#inicio" className="flex items-center gap-2.5" aria-label="Rumbo, ir al inicio">
+    <a href="#inicio" onClick={onClick} className="flex items-center gap-2.5" aria-label="Rumbo, ir al inicio">
       <svg viewBox="0 0 32 32" className="h-9 w-9" aria-hidden="true">
         <rect width="32" height="32" rx="8" className={light ? 'fill-pine-50' : 'fill-pine-800'} />
         <path

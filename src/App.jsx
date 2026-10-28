@@ -5,6 +5,7 @@ import CategoryList from './components/CategoryList'
 import SearchBar from './components/SearchBar'
 import EventList from './components/EventList'
 import EmptyState from './components/EmptyState'
+import EventPage from './components/EventPage'
 import Footer from './components/Footer'
 import events from './data/events'
 import categories from './data/categories'
@@ -12,6 +13,8 @@ import categories from './data/categories'
 function App() {
   const [selectedCategory, setSelectedCategory] = useState('Todos')
   const [search, setSearch] = useState('')
+  // Evento abierto en la página de detalle (null = pantalla principal)
+  const [selectedEvent, setSelectedEvent] = useState(null)
 
   // Un único listado derivado: se aplican ambos filtros sobre el array original
   const query = search.trim().toLowerCase()
@@ -26,9 +29,31 @@ function App() {
     setSearch('')
   }
 
+  const openEvent = (event) => {
+    setSelectedEvent(event)
+    window.scrollTo(0, 0)
+  }
+
+  const closeEvent = () => {
+    setSelectedEvent(null)
+    window.scrollTo(0, 0)
+  }
+
+  if (selectedEvent) {
+    return (
+      <>
+        <Header onNavigate={() => setSelectedEvent(null)} />
+        <main>
+          <EventPage event={selectedEvent} onBack={closeEvent} />
+        </main>
+        <Footer />
+      </>
+    )
+  }
+
   return (
     <>
-      <Header />
+      <Header onNavigate={() => setSelectedEvent(null)} />
       <main>
         <Hero />
 
@@ -55,7 +80,7 @@ function App() {
           </div>
 
           {filteredEvents.length > 0 ? (
-            <EventList events={filteredEvents} />
+            <EventList events={filteredEvents} onSelectEvent={openEvent} />
           ) : (
             <EmptyState onReset={resetFilters} />
           )}

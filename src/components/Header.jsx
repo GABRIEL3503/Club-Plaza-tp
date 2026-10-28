@@ -8,13 +8,13 @@ const links = [
   { label: 'Favoritos', href: '#favoritos' },
 ]
 
-function Header() {
+function Header({ onNavigate }) {
   const [open, setOpen] = useState(false)
 
   return (
     <header className="sticky top-0 z-30 border-b border-sand-200 bg-sand-50/90 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Logo />
+        <Logo onClick={onNavigate} />
 
         {/* Navegación escritorio */}
         <nav className="hidden items-center gap-8 md:flex">
@@ -22,6 +22,7 @@ function Header() {
             <a
               key={link.label}
               href={link.href}
+              onClick={onNavigate}
               className="text-sm font-medium text-pine-800 transition-colors hover:text-ember-600"
             >
               {link.label}
@@ -55,7 +56,10 @@ function Header() {
             <a
               key={link.label}
               href={link.href}
-              onClick={() => setOpen(false)}
+              onClick={() => {
+                setOpen(false)
+                onNavigate?.()
+              }}
               className="block rounded-lg px-3 py-3 font-medium text-pine-800 hover:bg-sand-100"
             >
               {link.label}

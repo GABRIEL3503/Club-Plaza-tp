@@ -1,7 +1,7 @@
 import { CalendarDays, MapPin } from 'lucide-react'
 import { formatDate, formatPrice } from '../utils/format'
 
-function EventCard({ title, category, date, location, image, price }) {
+function EventCard({ title, category, date, location, image, price, onView }) {
   return (
     <article className="group flex flex-col overflow-hidden rounded-2xl bg-white ring-1 ring-sand-200 transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-pine-900/10">
       <div className="relative aspect-[16/10] overflow-hidden">
@@ -40,6 +40,7 @@ function EventCard({ title, category, date, location, image, price }) {
           </span>
           <button
             type="button"
+            onClick={onView}
             className="rounded-full bg-pine-50 px-4 py-2 text-sm font-semibold text-pine-800 transition-colors hover:bg-pine-800 hover:text-white"
           >
             Ver evento

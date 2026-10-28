@@ -1,6 +1,6 @@
 import EventCard from './EventCard'
 
-function EventList({ events }) {
+function EventList({ events, onSelectEvent }) {
   return (
     <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {events.map((event) => (
@@ -12,6 +12,7 @@ function EventList({ events }) {
           location={event.location}
           image={event.image}
           price={event.price}
+          onView={() => onSelectEvent(event)}
         />
       ))}
     </div>
