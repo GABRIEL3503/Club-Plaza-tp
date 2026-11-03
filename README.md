@@ -1,6 +1,6 @@
-# Rumbo — Eventos outdoor en la Patagonia
+# Club Plaza — Eventos outdoor en la Patagonia
 
-**Rumbo** es una plataforma web para publicar y descubrir eventos deportivos y de aire libre en la Patagonia: carreras de montaña, rally de mountain bike, travesías, escalada, deportes de agua y nieve.
+**Club Plaza** es una plataforma web para publicar y descubrir eventos deportivos y de aire libre en la Patagonia: carreras de montaña, rally de mountain bike, travesías, escalada, deportes de agua y nieve.
 
 Proyecto integrador de **Programación Web Avanzada** — TP N.º 3 (React + Tailwind CSS). El repositorio se amplía en los siguientes trabajos prácticos.
 
@@ -21,7 +21,7 @@ Proyecto integrador de **Programación Web Avanzada** — TP N.º 3 (React + Tai
 
 | Elemento   | Definición                                                 |
 | ---------- | ---------------------------------------------------------- |
-| Nombre     | Rumbo                                                      |
+| Nombre     | Club Plaza                                                      |
 | Isotipo    | Cordillera con sol (`public/favicon.svg`, `Logo.jsx`)      |
 | Principal  | Verde bosque `#164731`                                     |
 | Acento     | Naranja atardecer `#F57A1F`                                |

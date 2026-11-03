@@ -1,4 +1,4 @@
-// Isotipo + logotipo de Rumbo
+// Isotipo + logotipo de Club Plaza
 function Logo({ light = false, onClick }) {
   return (
     <a 
