@@ -2,45 +2,35 @@ import { ArrowRight } from 'lucide-react'
 
 function Hero() {
   return (
-    <section id="inicio" className="relative overflow-hidden bg-pine-900 text-white">
-      {/* Recurso visual: cordillera ilustrada */}
-      <svg
-        viewBox="0 0 1440 600"
-        preserveAspectRatio="xMidYMax slice"
-        className="absolute inset-0 h-full w-full"
-        aria-hidden="true"
-      >
-        <circle cx="1120" cy="170" r="70" className="fill-ember-500" opacity="0.9" />
-        <path
-          d="M0 420 L180 260 L300 350 L470 190 L640 360 L800 240 L960 380 L1120 220 L1300 340 L1440 270 L1440 600 L0 600 Z"
-          className="fill-pine-700"
-          opacity="0.45"
+    <section id="inicio" className="relative overflow-hidden bg-blue-950 text-white">
+      {/* Recurso visual: Imagen fotográfica con superposición en degradé */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="/images/Frente_club3.jpg"
+          alt="Actividad deportiva en el club"
+          className="h-full w-full object-cover object-center opacity-60"
         />
-        <path
-          d="M0 500 L220 360 L380 460 L560 330 L760 470 L940 350 L1150 480 L1320 390 L1440 440 L1440 600 L0 600 Z"
-          className="fill-pine-800"
-        />
-        <path
-          d="M0 560 L260 470 L520 540 L780 480 L1040 550 L1300 490 L1440 520 L1440 600 L0 600 Z"
-          className="fill-pine-950"
-        />
-      </svg>
+        {/* Gradiente corregido: pasa de azul semitransparente (80%) a transparente */}
+        <div className="absolute inset-0 bg-gradient-to-r from-teal-950/80 via-blue-950/60 to-transparent" />
+      </div>
 
-      <div className="relative mx-auto max-w-7xl px-4 pb-40 pt-20 sm:px-6 sm:pt-28 lg:px-8 lg:pb-52 lg:pt-32">
-        <p className="mb-4 inline-block rounded-full bg-white/10 px-4 py-1.5 text-sm font-medium text-pine-100 ring-1 ring-white/20">
-          Deportes y aire libre en la Patagonia
+      <div className="relative z-10 mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8 lg:py-32">
+        <p className="mb-4 inline-block rounded-full bg-white/10 px-4 py-1.5 text-sm font-medium text-blue-100 backdrop-blur-sm ring-1 ring-white/20">
+          Deportes y eventos para toda la comunidad
         </p>
+
         <h1 className="max-w-3xl font-display text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-          Encontrá tu próxima <span className="text-ember-400">aventura</span>
+          Encontrá tu próxima <span className="text-blue-400">actividad</span>
         </h1>
-        <p className="mt-5 max-w-xl text-lg text-pine-100">
-          Carreras de montaña, rally de bici, travesías, escalada y más. Todos los eventos outdoor de
-          la región en un solo lugar.
+
+        <p className="mt-5 max-w-xl text-lg text-blue-100">
+          Fútbol, básquet, vóley, natación, pádel, boxeo... todo en un solo lugar.
         </p>
+
         <div className="mt-8 flex flex-wrap gap-3">
           <a
             href="#eventos"
-            className="group inline-flex items-center gap-2 rounded-full bg-ember-500 px-6 py-3 font-semibold text-white shadow-lg shadow-ember-500/25 transition-colors hover:bg-ember-600"
+            className="group inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-semibold text-blue-950 shadow-lg transition-colors hover:bg-blue-50"
           >
             Explorar eventos
             <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -54,7 +44,7 @@ function Hero() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 export default Hero
