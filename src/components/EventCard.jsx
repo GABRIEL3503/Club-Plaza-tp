@@ -20,14 +20,14 @@ function EventCard({ title, category, date, location, image, price, onView }) {
         <h3 className="font-display text-lg font-bold leading-snug text-pine-950">{title}</h3>
 
         <ul className="mt-3 space-y-1.5 text-sm text-pine-700/80">
-          <li className="flex items-center gap-2">
-            <CalendarDays className="h-4 w-4 shrink-0 text-ember-500" />
-            <span className="capitalize">{formatDate(date)}</span>
-          </li>
-          <li className="flex items-center gap-2">
-            <MapPin className="h-4 w-4 shrink-0 text-ember-500" />
-            {location}
-          </li>
+        <li className="flex items-center gap-2">
+  <CalendarDays className="h-4 w-4 shrink-0 text-blue-400" />
+  <span className="capitalize">{formatDate(date)}</span>
+</li>
+<li className="flex items-center gap-2">
+  <MapPin className="h-4 w-4 shrink-0 text-blue-400" />
+  {location}
+</li>
         </ul>
 
         <div className="mt-auto flex items-center justify-between gap-3 pt-5">
@@ -38,13 +38,13 @@ function EventCard({ title, category, date, location, image, price, onView }) {
           >
             {formatPrice(price)}
           </span>
-          <button
-            type="button"
-            onClick={onView}
-            className="rounded-full bg-pine-50 px-4 py-2 text-sm font-semibold text-pine-800 transition-colors hover:bg-pine-800 hover:text-white"
-          >
-            Ver evento
-          </button>
+     <button
+  type="button"
+  onClick={onView}
+  className="rounded-full bg-blue-900 px-5 py-2 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-blue-800"
+>
+  Ver evento
+</button>
         </div>
       </div>
     </article>

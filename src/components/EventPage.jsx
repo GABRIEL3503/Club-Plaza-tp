@@ -1,7 +1,7 @@
 import { ArrowLeft, CalendarDays, Clock, MapPin } from 'lucide-react'
 import { formatDate, formatPrice } from '../utils/format'
 
-// Página de detalle del evento 
+// Página de detalle del evento
 function EventPage({ event, onBack }) {
   return (
     <section className="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:px-8">
@@ -15,59 +15,59 @@ function EventPage({ event, onBack }) {
         Volver a eventos
       </button>
 
-      {/* Tarjeta Contenedora Principal */}
-      <div className="mt-4 overflow-hidden rounded-3xl bg-white ring-1 ring-blue-100 shadow-xl shadow-blue-950/5">
-        <img 
-          src={event.image} 
-          alt={event.title} 
-          className="aspect-[16/7] w-full object-cover" 
+      {/* Tarjeta contenedora principal */}
+      <div className="mt-4 overflow-hidden rounded-3xl bg-white shadow-xl ring-1 shadow-blue-950/5 ring-blue-100">
+        <img
+          src={event.image}
+          alt={event.title}
+          className="aspect-[16/7] w-full object-cover"
         />
 
         <div className="p-6 sm:p-10">
-          {/* Badge de Categoría */}
-          <span className="inline-block rounded-full bg-blue-50 border border-blue-200/60 px-3.5 py-1 text-xs font-bold text-blue-800 uppercase tracking-wider">
+          {/* Badge de categoría */}
+          <span className="inline-block rounded-full border border-blue-200/60 bg-blue-50 px-3.5 py-1 text-xs font-bold tracking-wider text-blue-800 uppercase">
             {event.category}
           </span>
 
-          {/* Título y Descripción */}
+          {/* Título y descripción */}
           <h1 className="mt-4 font-display text-3xl font-extrabold tracking-tight text-blue-950 sm:text-4xl">
             {event.title}
           </h1>
-          <p className="mt-3 text-lg text-slate-600 leading-relaxed">
+          <p className="mt-3 text-lg leading-relaxed text-slate-600">
             {event.description}
           </p>
 
-          {/* Datos Destacados (Fecha, Ubicación, Precio) */}
+          {/* Datos destacados (fecha, ubicación, precio) */}
           <ul className="mt-6 flex flex-wrap items-center gap-x-8 gap-y-3 border-y border-blue-100/80 py-4 text-sm font-medium text-slate-700">
             <li className="flex items-center gap-2">
-              <CalendarDays className="h-5 w-5 text-blue-600" />
+              <CalendarDays className="h-5 w-5 text-blue-400" />
               <span className="capitalize">{formatDate(event.date)}</span>
             </li>
             <li className="flex items-center gap-2">
-              <MapPin className="h-5 w-5 text-blue-600" />
+              <MapPin className="h-5 w-5 text-blue-400" />
               <span>{event.location}</span>
             </li>
-            <li className="font-display font-extrabold text-base text-blue-950 ml-auto sm:ml-0 bg-blue-50 border border-blue-200/80 px-3 py-1 rounded-xl">
+            <li className="ml-auto rounded-xl border border-blue-200/80 bg-blue-50 px-3 py-1 font-display text-base font-extrabold text-blue-950 sm:ml-0">
               {formatPrice(event.price)}
             </li>
           </ul>
 
-          {/* Banner 'Próximamente más información' con contraste dorado/ámbar */}
+          {/* Banner "Próximamente más información" */}
           <div className="mt-8 flex flex-col items-center rounded-2xl border-2 border-dashed border-blue-200 bg-blue-50/50 px-6 py-10 text-center">
-            <span className="flex h-12 w-12 items-center justify-center rounded-full bg-amber-100 text-amber-600 ring-4 ring-amber-50">
+            <span className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 text-blue-500 ring-4 ring-blue-50">
               <Clock className="h-6 w-6" />
             </span>
             <h2 className="mt-4 font-display text-xl font-bold text-blue-950">
               Próximamente más información
             </h2>
-            <p className="mt-1 max-w-sm text-sm text-slate-600 leading-relaxed">
+            <p className="mt-1 max-w-sm text-sm leading-relaxed text-slate-600">
               Estamos preparando el detalle completo de este evento: recorrido, cronograma e inscripción.
             </p>
           </div>
         </div>
       </div>
     </section>
-  );
+  )
 }
 
 export default EventPage
