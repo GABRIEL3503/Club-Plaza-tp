@@ -1,11 +1,36 @@
 // Categorías de la plataforma. El campo `id` coincide con `event.category`.
+
 const categories = [
-  { id: 'Trail running', icon: 'Footprints', description: 'Carreras de montaña' },
-  { id: 'Mountain bike', icon: 'Bike', description: 'Rally y travesías' },
-  { id: 'Trekking', icon: 'Tent', description: 'Caminatas y travesías' },
-  { id: 'Escalada', icon: 'Mountain', description: 'Roca y boulder' },
-  { id: 'Deportes de agua', icon: 'Waves', description: 'Kayak, SUP y regatas' },
-  { id: 'Nieve', icon: 'Snowflake', description: 'Esquí y snowboard' },
+  { 
+    id: 'Fútbol', 
+    icon: 'Trophy', 
+    description: 'Torneos, ligas y partidos de cancha' 
+  },
+  { 
+    id: 'Básquet', 
+    icon: 'Dribbble', 
+    description: 'Entrenamientos y encuentros en equipos de diferentes categorías' 
+  },
+  { 
+    id: 'Vóley', 
+    icon: 'Activity', 
+    description: 'Encuentros de voley y entrenamientos en cancha cubierta' 
+  },
+  { 
+    id: 'Pádel', 
+    icon: 'CircleDot', 
+    description: 'Circuito de parejas y torneos express' 
+  },
+  { 
+    id: 'Natación', 
+    icon: 'Waves', 
+    description: 'Natación en pileta semiolímpica' 
+  },
+  { 
+    id: 'Boxeo', 
+    icon: 'Swords', 
+    description: 'Exhibiciones, guanteos y entrenamientos' 
+  },
 ]
 
 export default categories
