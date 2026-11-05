@@ -4,12 +4,12 @@
 const categories = [
   {
     id: 'Fútbol',
-    icon: 'Circle',
+    icon: 'ShieldBan',
     description: 'Partidos y entrenamientos de fútbol'
   },
   {
     id: 'Básquet',
-    icon: 'Circle',
+    icon: 'SportShoe',
     description: 'Encuentros y torneos de básquet'
   },
   {

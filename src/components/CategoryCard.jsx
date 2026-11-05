@@ -1,6 +1,7 @@
 import {
   LayoutGrid,
-  Circle,
+  ShieldBan,
+  SportShoe,
   Volleyball,
   Waves,
   Trophy,
@@ -9,7 +10,8 @@ import {
 
 const icons = {
   LayoutGrid,
-  Circle,
+  ShieldBan,
+  SportShoe,
   Volleyball,
   Waves,
   Trophy,
