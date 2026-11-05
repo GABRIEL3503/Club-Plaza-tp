@@ -1,35 +1,36 @@
+
 // Categorías de la plataforma. El campo `id` coincide con `event.category`.
 
 const categories = [
-  { 
-    id: 'Fútbol', 
-    icon: 'Trophy', 
-    description: 'Torneos, ligas y partidos de cancha' 
+  {
+    id: 'Fútbol',
+    icon: 'Circle',
+    description: 'Partidos y entrenamientos de fútbol'
   },
-  { 
-    id: 'Básquet', 
-    icon: 'Dribbble', 
-    description: 'Entrenamientos y encuentros en equipos de diferentes categorías' 
+  {
+    id: 'Básquet',
+    icon: 'Circle',
+    description: 'Encuentros y torneos de básquet'
   },
-  { 
-    id: 'Vóley', 
-    icon: 'Activity', 
-    description: 'Encuentros de voley y entrenamientos en cancha cubierta' 
+  {
+    id: 'Vóley',
+    icon: 'Volleyball',
+    description: 'Partidos y torneos de vóley'
   },
-  { 
-    id: 'Pádel', 
-    icon: 'CircleDot', 
-    description: 'Circuito de parejas y torneos express' 
+  {
+    id: 'Natación',
+    icon: 'Waves',
+    description: 'Competencias y actividades acuáticas'
   },
-  { 
-    id: 'Natación', 
-    icon: 'Waves', 
-    description: 'Natación en pileta semiolímpica' 
+  {
+    id: 'Pádel',
+    icon: 'Trophy',
+    description: 'Partidos y torneos de pádel'
   },
-  { 
-    id: 'Boxeo', 
-    icon: 'Swords', 
-    description: 'Exhibiciones, guanteos y entrenamientos' 
+  {
+    id: 'Boxeo',
+    icon: 'Dumbbell',
+    description: 'Entrenamientos y encuentros de boxeo'
   },
 ]
 
