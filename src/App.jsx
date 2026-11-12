@@ -16,14 +16,16 @@ function App() {
   // Evento abierto en la página de detalle (null = pantalla principal)
   const [selectedEvent, setSelectedEvent] = useState(null);
 
-  // Un único listado derivado: se aplican ambos filtros sobre el array original
+  // Un único listado derivado: se aplican ambos filtros y se ordena por fecha
   const query = search.trim().toLowerCase();
-  const filteredEvents = events.filter((event) => {
-    const matchesCategory =
-      selectedCategory === 'Todos' || event.category === selectedCategory;
-    const matchesSearch = event.title.toLowerCase().includes(query);
-    return matchesCategory && matchesSearch;
-  });
+  const filteredEvents = events
+    .filter((event) => {
+      const matchesCategory =
+        selectedCategory === 'Todos' || event.category === selectedCategory;
+      const matchesSearch = event.title.toLowerCase().includes(query);
+      return matchesCategory && matchesSearch;
+    })
+    .sort((a, b) => new Date(a.date) - new Date(b.date));
 
   const resetFilters = () => {
     setSelectedCategory('Todos');
@@ -57,7 +59,7 @@ function App() {
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 flex flex-col font-sans">
       <Header onNavigate={() => setSelectedEvent(null)} />
-      
+
       <main className="flex-grow pb-16">
         <Hero />
 
