@@ -3,7 +3,7 @@ import CategoryCard from './CategoryCard'
 
 function CategoryList({ categories, selected, onSelect }) {
   return (
-    <section id="categorias" className="mx-auto max-w-7xl px-4 pt-16 sm:px-6 lg:px-8">
+    <section className="mx-auto max-w-7xl px-4 pt-16 sm:px-6 lg:px-8">
 
       <h2 className="font-display text-2xl font-bold tracking-tight sm:text-3xl">
         Categorías
