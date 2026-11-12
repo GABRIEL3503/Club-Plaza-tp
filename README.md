@@ -32,7 +32,9 @@ Proyecto integrador de **Programación Web Avanzada** — Facultad de Informáti
 | Tipografía | Outfit (títulos) · Inter (texto)                      |
 | Íconos     | Lucide React                                          |
 
-Los colores y fuentes están definidos como tokens en `src/index.css` (`@theme`).
+Los colores se aplican con la paleta de Tailwind CSS: azul primario (`blue-900`),
+celeste de acento (`blue-400`) y fondo gris claro (`slate-50`). Las fuentes
+están definidas como tokens en `src/index.css` (`@theme`).
 
 Guía completa (logo, paleta, tipografía, íconos y estados de componentes): [docs/identidad-visual-club-plaza.pdf](docs/identidad-visual-club-plaza.pdf)
 
