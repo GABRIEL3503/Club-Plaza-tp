@@ -3,7 +3,7 @@ import { formatDate, formatPrice } from '../utils/format'
 
 function EventCard({ title, category, date, location, image, price, onView }) {
   return (
-    <article className="group flex flex-col overflow-hidden rounded-2xl bg-white ring-1 ring-sand-200 transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-pine-900/10">
+    <article className="group flex flex-col overflow-hidden rounded-2xl bg-white ring-1 ring-slate-200 transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-900/10">
       <div className="relative aspect-[16/10] overflow-hidden">
         <img
           src={image}

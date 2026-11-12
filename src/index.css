@@ -1,31 +1,9 @@
 @import 'tailwindcss';
 
-/* Identidad visual de Rumbo */
+/* Identidad visual — Club Atlético Plaza Huincul */
 @theme {
   --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
   --font-display: 'Outfit', ui-sans-serif, system-ui, sans-serif;
-
-  /* Verde bosque (principal) */
-  --color-pine-50: #eef7f2;
-  --color-pine-100: #d5ebdf;
-  --color-pine-200: #acd6c0;
-  --color-pine-500: #2f8a5f;
-  --color-pine-600: #217049;
-  --color-pine-700: #1b5a3c;
-  --color-pine-800: #164731;
-  --color-pine-900: #0f3324;
-  --color-pine-950: #0a2218;
-
-  /* Naranja atardecer (acento) */
-  --color-ember-100: #ffe9d6;
-  --color-ember-400: #ff9a4d;
-  --color-ember-500: #f57a1f;
-  --color-ember-600: #dc6110;
-
-  /* Neutro cálido */
-  --color-sand-50: #faf8f4;
-  --color-sand-100: #f2eee6;
-  --color-sand-200: #e4ddd0;
 }
 
 html {
@@ -33,5 +11,5 @@ html {
 }
 
 body {
-  @apply bg-sand-50 font-sans text-pine-950 antialiased;
+  @apply bg-slate-50 font-sans text-slate-900 antialiased;
 }
